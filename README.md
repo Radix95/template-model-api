@@ -66,6 +66,10 @@ An existing user can be created running:
 
 ## Repository structure
 ```
+├── artifacts/
+│   └── model.pkl       # the model
+├── data/
+│   └── test-data.csv   # test data for prediction
 ├── model_template/
 │   ├── repository/
 │   │   ├── modelML.py  # contains the actions triggered by the api calls of the model 
