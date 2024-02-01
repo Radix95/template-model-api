@@ -24,10 +24,10 @@ def predict(request, db: Session, save_predictions: bool = False, save_features:
     feat3 = np.asarray(request.feat3)
 
     if (len(feat1)>limit) | (len(feat2)>limit) | (len(feat3)>limit):
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Max length of features vectors must be less than {limit} - Minerva Digital Intelligence")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Max length of features vectors must be less than {limit}")
 
     if (len(feat1)!=len(feat2))|(len(feat1)!=len(feat3)):
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Malformed input features - Minerva Digital Intelligence")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Malformed input features")
 
     feat1 = preprocess(feat=feat1)   
 
@@ -67,4 +67,4 @@ def predict(request, db: Session, save_predictions: bool = False, save_features:
 
 
 def info(request, db: Session):
-    return {'data': "This method returns model's info - Minerva Digital Intelligence"} 
+    return {'data': "This method returns model's info"} 
