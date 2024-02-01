@@ -143,7 +143,7 @@ All these APIs are locked and a valid access token must be provided (as in the a
     ```
     Output: [
         {
-            "data": "This method returns model's info - Minerva Digital Intelligence"
+            "data": "This method returns model's info 
         }
     ]
     ```
